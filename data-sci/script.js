@@ -1,21 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 1. Theme swap ---
+    // --- 1. Theme Switching (Sliding Effect) ---
     const toggleBtn = document.getElementById('theme-toggle-btn');
     const toggleIcon = document.getElementById('toggle-icon');
     const overlay = document.querySelector('.transition-overlay');
     const body = document.body;
 
-    if(toggleBtn) {
+    if (toggleBtn) {
         toggleBtn.addEventListener('click', () => {
-            
-            // Start animation 
+            // Start the animation (Box slides in)
             overlay.classList.add('active');
 
-            // When the box closes the screen (after 400ms) 
+            // Switch theme when the screen is fully covered (after 400ms)
             setTimeout(() => {
                 body.classList.toggle('light-mode');
 
-                // Change icon
+                // Toggle the icon (Sun <-> Moon)
                 if (body.classList.contains('light-mode')) {
                     toggleIcon.classList.remove('fa-sun');
                     toggleIcon.classList.add('fa-moon');
@@ -25,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 400); 
 
-            // When animation ends (after 800ms)
+            // Clean up the class when animation ends (after 800ms)
             setTimeout(() => {
                 overlay.classList.remove('active');
             }, 800);
         });
     }
 
-    // --- 2. Scroll menu activation ---
+    // --- 2. Active Scroll Menu & Highlighting ---
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('nav ul li a');
 
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // -150px, menü yüksekliği payı
+            // Offset for menu height (-150px) to trigger activation earlier
             if (pageYOffset >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
@@ -48,24 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLi.forEach(a => {
             a.classList.remove('active');
+            // Check if the link href includes the current section id
             if (a.getAttribute('href').includes(current)) {
-                if(current !== "") a.classList.add('active'); 
+                if (current !== "") a.classList.add('active'); 
             }
         });
     });
-});
 
-/* --- 3. Mobile menu open/close --- */
+    // --- 3. Mobile Menu Open/Close ---
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
     const menuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
 
-    if(mobileMenuBtn && navList) {
+    if (mobileMenuBtn && navList) {
         mobileMenuBtn.addEventListener('click', () => {
-            // Menu open/close
+            // Toggle menu visibility
             navList.classList.toggle('active');
 
-            // Icon change
+            // Toggle menu icon (Bars <-> Times/X)
             if (navList.classList.contains('active')) {
                 menuIcon.classList.remove('fa-bars');
                 menuIcon.classList.add('fa-times');
@@ -75,16 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // When a nav link is clicked, close the menu
+        // Close the menu when a navigation link is clicked
         const navLinks = document.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                // Mobile only: close the menu
                 navList.classList.remove('active');
                 
-                // Change icon back to bars
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
+                // Reset the icon back to bars
+                if (menuIcon) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
             });
         });
     }
+});
