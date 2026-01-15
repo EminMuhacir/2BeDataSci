@@ -7,18 +7,16 @@
     <title>2BeDataSci</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="data-sci/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <!-- header -->
     <header>
         <div class="logo">2BeDataSci</div>
-
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
-
         <nav>
             <ul id="nav-list">
                 <li><a href="#home">Ana Sayfa</a></li>
@@ -33,7 +31,7 @@
             </ul>
         </nav>
     </header>
-
+    <!-- home -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Merhaba, Ben <span class="highlight">Emin</span></h1>
@@ -41,7 +39,7 @@
             <a href="#portfolio" class="btn">Çalışmalarımı Gör</a>
         </div>
     </section>
-
+    <!-- about -->
     <section id="about">
         <h2 class="section-title">Hakkımda</h2>
         <div class="about-content">
@@ -65,7 +63,7 @@
             </div>
         </div>
     </section>
-
+    <!-- skills -->
     <section id="skills" class="bg-light">
         <h2 class="section-title">Uzmanlık Alanlarım</h2>
         <div class="skills-container">
@@ -86,7 +84,7 @@
             </div>
         </div>
     </section>
-
+    <!-- portfolio -->
     <section id="portfolio">
         <h2 class="section-title">Son Projelerim</h2>
         <div class="portfolio-grid">
@@ -113,38 +111,43 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section  -->
     <section id="contact">
+        <h2 class="section-title">İletişime Geç</h2>
+        <div class="contact-container">
+            <a href="mailto:eminmuhacir@gmail.com" class="contact-card email">
+                <i class="fas fa-envelope"></i>
+                <span>E-posta</span>
+                <p>eminmuhacir@gmail.com</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/muhammed-muhacir-8899581a5/" target="_blank"
+                class="contact-card linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+                <p>Profilime Git</p>
+            </a>
+
+            <a href="https://github.com/EminMuhacir" target="_blank" class="contact-card github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <p>Projelerimi İncele</p>
+            </a>
+
+            <a href="https://instagram.com/2bedatasci" target="_blank" class="contact-card instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+                <p>Beni Takip Et</p>
+            </a>
+        </div>
+    </section>
     <footer>
         <div class="footer-container">
-            <h3 class="footer-nick">Emin</h3>
-            <p class="footer-slogan">Veri ile hikayeler anlatıyor, kod ile çözümler üretiyorum.</p>
-
-            <div class="footer-socials">
-                <a href="mailto:eminmuhacir@gmail.com" class="footer-icon email" title="E-posta Gönder">
-                    <i class="fas fa-envelope"></i><br>
-                </a>
-                <a href="https://www.linkedin.com/in/muhammed-muhacir-8899581a5/" target="_blank"
-                    class="footer-icon linkedin" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/EminMuhacir" target="_blank" class="footer-icon github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://instagram.com/2bedatasci" target="_blank" class="footer-icon instagram"
-                    title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-        <div class="footer-bottom">
             <p>&copy; 2026 Tüm Hakları Saklıdır. Emin tarafından tasarlanmıştır.</p>
         </div>
-
         <div class="transition-overlay"></div>
-        <script src="data-sci/script.js"></script>
     </footer>
+    <script src="script.js"></script>
 </body>
-
 
 </html>
