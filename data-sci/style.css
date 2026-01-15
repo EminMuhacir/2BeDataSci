@@ -236,17 +236,40 @@ section {
 }
 
 /* --- Skills --- */
-.skills-container,
-.portfolio-grid,
 .contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.skills-container,
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
 .skill-card,
-.portfolio-item,
-.contact-card {
+.portfolio-item {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 15px;
