@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2BeDataSci</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo">2BeDataSci</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#skills">Yetenekler</a></li>
+                <li><a href="#portfolio">Projeler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+
+                <li class="theme-switch" id="theme-toggle-btn">
+                    <i class="fas fa-sun" id="toggle-icon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- home -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Merhaba, Ben <span class="highlight">Emin</span></h1>
+            <p>Büyük Veri Analisti & Web Geliştirici</p>
+            <a href="#portfolio" class="btn">Çalışmalarımı Gör</a>
+        </div>
+    </section>
+    <!-- about -->
+    <section id="about">
+        <h2 class="section-title">Hakkımda</h2>
+        <div class="about-content">
+            <!-- <div class="about-img">
+                <img src="https://via.placeholder.com/300" alt="Profil Fotoğrafı">
+            </div> -->
+            <div class="about-text">
+                <h3>Veri ile Geleceği Tasarlıyorum</h3>
+                <p>
+                    Merhaba! Ben veri analitiği ve web teknolojileri üzerine çalışan tutkulu bir geliştiriciyim.
+                    Karmaşık verileri anlamlı bilgilere dönüştürmeyi ve kullanıcı dostu arayüzler tasarlamayı seviyorum.
+                    Necmettin Erbakan Üniversitesi'nde eğitimime devam ederken, aynı zamanda pratik projelerle kendimi
+                    geliştiriyorum.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Data Analysis</span>
+                    <span>Web Dev</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skills -->
+    <section id="skills" class="bg-light">
+        <h2 class="section-title">Uzmanlık Alanlarım</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>Veri Analizi</h3>
+                <p>SQL, Power BI ve Python (Pandas/NumPy) kullanarak veri modelleme.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Web Geliştirme</h3>
+                <p>HTML5, CSS3 ve Modern JavaScript ile responsive tasarımlar.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <h3>İstatistik</h3>
+                <p>Veriden anlamlı sonuçlar çıkarmak için istatistiksel yöntemler.</p>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio -->
+    <section id="portfolio">
+        <h2 class="section-title">Son Projelerim</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-img">Proje 1</div>
+                <div class="portfolio-info">
+                    <h3>Yakında sizlerle</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">Proje 2</div>
+                <div class="portfolio-info">
+                    <h3>Yakında sizlerle</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">Proje 3</div>
+                <div class="portfolio-info">
+                    <h3>Yakında sizlerle</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section  -->
+    <section id="contact">
+        <h2 class="section-title">İletişime Geç</h2>
+        <div class="contact-container">
+            <a href="mailto:eminmuhacir@gmail.com" class="contact-card email">
+                <i class="fas fa-envelope"></i>
+                <span>E-posta</span>
+                <p>eminmuhacir@gmail.com</p>
+            </a>
+
+            <a href="https://www.linkedin.com/in/muhammed-muhacir-8899581a5/" target="_blank"
+                class="contact-card linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+                <p>Profilime Git</p>
+            </a>
+
+            <a href="https://github.com/EminMuhacir" target="_blank" class="contact-card github">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                <p>Projelerimi İncele</p>
+            </a>
+
+            <a href="https://instagram.com/2bedatasci" target="_blank" class="contact-card instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+                <p>Beni Takip Et</p>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Tüm Hakları Saklıdır. Emin tarafından tasarlanmıştır.</p>
+        </div>
+        <div class="transition-overlay"></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
